@@ -1,0 +1,10 @@
+<h1>글 상세보기 페이지</h1>
+<h2>글 제목 : {{ post.title }}</h2>
+<h2>글 생성 시간 : {{ post.created_at }}</h2>
+<h2>글 수정 시간 : {{ post.updated_at }}</h2>
+<p>글 내용 : {{ post.content }}</p>
+<a href="{% url 'update' post.pk %}">수정</a><br>
+<form action="{% url 'delete' post.pk %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="삭제"/>
+</form>
