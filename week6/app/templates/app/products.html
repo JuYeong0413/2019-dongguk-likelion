@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>상품 등록 페이지 입니다</h1>
+
+<div class="row">
+    {% for item in products_html %}
+        <div class="card" style="width: 18rem;">
+          <img src="{{ item.image.url }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ item.title }}</h5>
+            <p class="card-text">{{ item.price }} <br> {{ item.description }}</p>
+          </div>
+        </div>
+    {% endfor %}
+</div>
+<a href="{% url 'app:register' %}"><button type="button" class="btn btn-primary">상품등록</button></a>
+
+{% endblock %}
