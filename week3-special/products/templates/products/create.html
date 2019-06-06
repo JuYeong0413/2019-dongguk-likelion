@@ -1,0 +1,13 @@
+<h1>상품을 생산해봅시다.</h1>
+<form action="{% url 'create' %}" method="POST">
+    {% csrf_token %}
+    <label>상품 이름</label><br>
+    <input type="text" name="name"><br><br>
+    
+    <label>상품 가격</label><br>
+    <input type="number" name="price"><br><br>
+    
+    <label>상품 설명</label><br>
+    <textarea name="description"></textarea><br><br>
+    <input type="submit" value="생성"/>
+</form>

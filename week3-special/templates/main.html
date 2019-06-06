@@ -1,0 +1,14 @@
+<a href="{% url 'bbbb' %}">이름입력</a>
+<!-- app 이름을 앞에 써줘야함 -->
+<!-- 'gosu:bbbb'-->
+<br>
+<a href="{% url 'create' %}">상품생성</a>
+
+{% for item in products %}
+    <p>{{ item.pk }}</p>
+    <p>{{ item.name }}</p>
+    <p>{{ item.price }}</p>
+    <p>{{ item.description }}</p>
+    <p>{{ item.created_at }}</p>
+    <br><br><br>
+{% endfor %}

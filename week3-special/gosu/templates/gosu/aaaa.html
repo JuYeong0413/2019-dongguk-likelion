@@ -1,0 +1,6 @@
+<form action="{% url 'eeee' %}" method="POST">
+     <!--action은 href와 똑같은 것-->
+    {% csrf_token %}
+    <input type="text" name="dddd"/> 
+    <input type="submit" value="Submit"/>
+</form>
