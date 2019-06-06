@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>상품을 생산합니다.</h1>
+<form action="{% url 'products:create' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label>상품이름</label><br>
+    <input type="text" name="title"><br><br>
+    
+    <label>상품이미지</label><br>
+    <input type="file" name="image"><br><br>
+    
+    <label>가격</label><br>
+    <input type="number" name="price"><br><br>
+    
+    <label>상품 설명</label><br>
+    <textarea name="description"></textarea><br>
+    
+    <input type="submit" class="btn btn-primary" value="등록">
+</form>
+{% endblock %}
