@@ -1,0 +1,11 @@
+<h1>new</h1>
+
+<a href="index">index</a> <br>
+<a href="index.html">index_html</a> <br>
+<a href="{% url 'index' %}"> index_url</a> <br> <!-- django스러운 url설정, 저장했던 이름으로 가는 것 -->
+
+<form action="{% url 'index' %}"> <!-- 페이지 경로(어디로 보낼 것인지), index로 보낸다 -->
+    <input type="text" name="where"/>
+    <input type="text" name="when"/>
+    <input type="submit" value="Submit"/>
+</form>
