@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h1>당신 이름이 뭐죠?</h1>
+    <form action="{% url 'get_name' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="name"/>
+        <input type="submit" value="입력"/>
+    </form>
+{% endblock %}

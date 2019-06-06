@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h1>모험을 만들어 봅시다</h1>
+    <h2>여러분은 멋사에 들어왔습니다.</h2>
+    <h3>이제 어쩔건가요?</h3>
+    <a href="{% url 'input_name' %}">열심히 한다</a><br>
+    <a href="{% url 'death' %}">나간다</a>
+{% endblock %}
