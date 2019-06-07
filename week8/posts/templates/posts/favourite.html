@@ -1,0 +1,9 @@
+<a href="{% url 'home' %}">메인화면</a>
+<h1>내가 좋아요 누른 글</h1>
+{% for post in posts %}
+    <div>
+        <a href="{% url 'posts:show' post.pk %}"><h2>제목 : {{ post.title }}</h2></a>
+        <p>쓰니 : {{ post.user }}</p>
+        <hr>
+    </div>
+{% endfor %}
