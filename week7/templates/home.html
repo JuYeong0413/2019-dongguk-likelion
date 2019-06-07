@@ -1,0 +1,28 @@
+{% if user.is_authenticated %} <!-- 인증이 되어있으면(로그인이 되어있으면) -->
+  안녕 {{ user.username }}!
+<a href="{% url 'account_logout' %}">logout</a>
+<a href="{% url 'posts:new' %}">새 글 쓰기</a>
+<p>===========================</p>
+{% for post in posts %}
+    <a href="{% url 'posts:show' post.id %}"><h2>#{{ post.id }} : {{ post.title }}</h2></a>
+    <p>쓰니: {{ post.user }}</p>
+    <p>===========================</p>
+    {% empty %}
+    <p>글이 없습니다.</p>
+{% endfor %}
+
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'account_login' %}">login</a>
+{% endif %}
+
+
+<!--<a href="{% url 'posts:new' %}">새 글 쓰기</a>-->
+<!--<p>===========================</p>-->
+<!--{% for post in posts %}-->
+<!--    <a href="{% url 'posts:show' post.id %}"><h2>#{{ post.id }} : {{ post.title }}</h2></a>-->
+<!--    <p>쓰니: {{ post.username }}</p>-->
+<!--    <p>===========================</p>-->
+<!--    {% empty %}-->
+<!--    <p>글이 없습니다.</p>-->
+<!--{% endfor %}-->
