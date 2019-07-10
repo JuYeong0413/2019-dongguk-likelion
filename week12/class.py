@@ -25,7 +25,7 @@ Post.hello()
 post.delete()
 
 
-class Noble(Post):
+class Novel(Post):
     def __init__(self, writer, title, content, view_count):
         self.writer = writer
         super().__init__(title, content, view_count)
@@ -34,9 +34,9 @@ class Noble(Post):
         print("{}글이 지워졌어요ㅠㅠ".format(self.title))
 
 
-noble = Noble("황순원", "소나기", "슬펐다", 100000)
-print(noble.title)
-noble.delete()
+novel = Novel("황순원", "소나기", "슬펐다", 100000)
+print(novel.title)
+novel.delete()
 
 # 모듈 module은 파일 하나를 의미함
 # 패키지 package는 모듈들이 모여있는 폴더
