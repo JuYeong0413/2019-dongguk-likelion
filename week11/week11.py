@@ -95,7 +95,6 @@ def function(num1, num2):
 for result in function(3, 4):
     result_tuple += (result,) # 튜플로 담기
 
-# 출력
 for result in result_tuple:
     print(result)
 
