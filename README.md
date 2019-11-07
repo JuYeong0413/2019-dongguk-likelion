@@ -29,3 +29,4 @@
 3주차(09.18) - 성균관대학교 연합세션 : 반응형 타임라인 따라 만들기  
 4주차(09.25) - Dialogflow로 AI 챗봇 만들기  
 5주차(10.30) - [jQuery](https://www.tutorialrepublic.com/jquery-examples.php)  
+6주차(11.06) - Django 복습  
